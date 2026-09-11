@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧩 Dev Stack
+#  Dev Stack
 
 **Build Your Ideal Development Stack**
 
@@ -10,11 +10,11 @@ Browse frontend, backend, database, and tooling options side by side, and put to
 
 ---
 
-## 📖 About
+##  About
 
 Dev Stack is a technology explorer built for developers who are tired of losing track of which framework, database, or tool they were considering. It loads a curated list of technologies, lets you filter them by category, and lets you build a personal "stack" by adding the tools you're interested in — with instant feedback every step of the way.
 
-## 🛠️ Built With
+##  Built With
 
 - **React 19** — component-based UI
 - **TypeScript** — type safety across the app
@@ -22,13 +22,13 @@ Dev Stack is a technology explorer built for developers who are tired of losing 
 - **Tailwind CSS v4** — utility-first styling
 - **React Toastify** — toast notifications
 
-## ✨ Features
+##  Features
 
 - **Browse & filter technologies** — a responsive grid of tech cards pulled from a JSON data file, filterable by category (Frontend, Backend, Database, Language, Styling, DevOps, Tools).
 - **Build your personal stack** — add technologies to a "Your Stack" panel with one click; duplicate adds are blocked with a friendly toast instead of a silent failure.
 - **Fully responsive design** — a dedicated mobile layout (centered hero, collapsible nav, stacked footer) alongside the desktop layout, so the experience holds up on any screen size.
 
-## 🚀 Getting Started
+##  Getting Started
 
 ```bash
 npm install
