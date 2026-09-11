@@ -37,7 +37,7 @@ npm run dev
 
 ---
 
-## 💬 React Q&A
+##  React Q&A
 
 **1. What is JSX, and why is it used in React?**
 JSX is a syntax extension that lets you write HTML-like markup directly inside JavaScript. React uses it because it makes describing what the UI should look like much more readable than calling `React.createElement()` by hand — under the hood, JSX just compiles down to that anyway.
