@@ -9,24 +9,24 @@ export default function Navbar() {
   const [active, setActive] = useState("Home");
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-slate-100">
+    <header className="sticky top-0 z-50 bg-white border-b border-slate-100 font-sans">
       
-      {/* Mobile Navbar */}
+     
       <div className="md:hidden grid grid-cols-[1fr_auto_1fr] items-center gap-2 px-4 h-[60px]">
-        
+
         {/* Hamburger */}
         <button
-          className="justify-self-start text-slate-700 p-1"
+          className="justify-self-start text-slate-600 p-1"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
           <svg
-            width="20"
-            height="20"
+            width="19"
+            height="19"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            strokeWidth="2"
+            strokeWidth="1.8"
             strokeLinecap="round"
           >
             {open ? (
@@ -37,9 +37,9 @@ export default function Navbar() {
           </svg>
         </button>
 
-        {/* Mobile Logo */}
+        
         <a
-          href="#top"
+          href="#home"
           className="justify-self-center"
           onClick={() => setActive("Home")}
         >
@@ -50,14 +50,14 @@ export default function Navbar() {
           />
         </a>
 
-        {/* Mobile Auth Buttons */}
+        
         <div className="justify-self-end flex items-center gap-2.5">
-          <button className="text-[12px] text-slate-600 whitespace-nowrap">
+          <button className="text-[11px] font-normal text-slate-600 whitespace-nowrap hover:text-slate-900 transition-colors">
             Sign In
           </button>
 
           <button
-            className="text-[11px] font-semibold text-white px-3.5 py-2 rounded-full whitespace-nowrap"
+            className="text-[10px] font-semibold text-white px-3.5 py-2 rounded-full whitespace-nowrap"
             style={{ backgroundImage: GRADIENT }}
           >
             Sign Up
@@ -65,12 +65,12 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Desktop Navbar */}
+      
       <div className="hidden md:flex max-w-7xl mx-auto px-8 h-[68px] items-center justify-between">
-        
-        {/* Desktop Logo */}
+
+        {/* Logo */}
         <a
-          href="#top"
+          href="#home"
           className="flex items-center mr-10"
           onClick={() => setActive("Home")}
         >
@@ -81,8 +81,9 @@ export default function Navbar() {
           />
         </a>
 
-        {/* Navigation */}
-        <nav className="flex items-center gap-8 text-[14px] flex-1 justify-center">
+        {/* Navigation Links */}
+        <nav className="flex items-center gap-7 flex-1 justify-center">
+
           {LINKS.map((l) => (
             <a
               key={l}
@@ -90,8 +91,8 @@ export default function Navbar() {
               onClick={() => setActive(l)}
               className={
                 active === l
-                  ? "font-medium"
-                  : "text-slate-500 hover:text-slate-800 transition-colors"
+                  ? "text-[11px] font-medium"
+                  : "text-[11px] font-normal text-slate-500 hover:text-slate-800 transition-colors"
               }
               style={
                 active === l
@@ -107,26 +108,30 @@ export default function Navbar() {
               {l}
             </a>
           ))}
+
         </nav>
 
-        {/* Desktop Auth Buttons */}
+        {/* Desktop Auth */}
         <div className="flex items-center gap-4">
-          <button className="text-[14px] text-slate-600 hover:text-slate-900 transition-colors">
+
+          <button className="text-[11px] font-normal text-slate-600 hover:text-slate-900 transition-colors">
             Sign In
           </button>
 
           <button
-            className="text-[13px] font-semibold text-white px-5 py-2.5 rounded-full"
+            className="text-[11px] font-semibold text-white px-4 py-2.5 rounded-full"
             style={{ backgroundImage: GRADIENT }}
           >
             Sign Up
           </button>
+
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      
       {open && (
-        <div className="md:hidden border-t border-slate-100 px-5 py-3 flex flex-col gap-3 text-[14px] text-slate-600 bg-white">
+        <div className="md:hidden border-t border-slate-100 px-5 py-3 flex flex-col gap-3 text-[12px] font-normal text-slate-500 bg-white">
+
           {LINKS.map((l) => (
             <a
               key={l}
@@ -135,10 +140,12 @@ export default function Navbar() {
                 setActive(l);
                 setOpen(false);
               }}
+              className="hover:text-slate-900 transition-colors"
             >
               {l}
             </a>
           ))}
+
         </div>
       )}
     </header>
