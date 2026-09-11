@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { GRADIENT } from "../theme";
-// import { GradientText } from "./ui";
-import { GradientText } from "./ui";
 import logoText from "../assets/logo-text.png";
 
 const LINKS = ["Home", "Technologies", "Projects", "About", "Contact"];
@@ -12,8 +10,11 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-slate-100">
-      {/* mobile row: hamburger — brand (centered) — sign in / sign up */}
+      
+      {/* Mobile Navbar */}
       <div className="md:hidden grid grid-cols-[1fr_auto_1fr] items-center gap-2 px-4 h-[60px]">
+        
+        {/* Hamburger */}
         <button
           className="justify-self-start text-slate-700 p-1"
           onClick={() => setOpen(!open)}
@@ -36,18 +37,25 @@ export default function Navbar() {
           </svg>
         </button>
 
+        {/* Mobile Logo */}
         <a
           href="#top"
           className="justify-self-center"
           onClick={() => setActive("Home")}
         >
-          <img src={logoText} alt="Dev Stack" className="h-7 w-auto" />
+          <img
+            src={logoText}
+            alt="Dev Stack"
+            className="h-7 w-auto"
+          />
         </a>
 
+        {/* Mobile Auth Buttons */}
         <div className="justify-self-end flex items-center gap-2.5">
           <button className="text-[12px] text-slate-600 whitespace-nowrap">
             Sign In
           </button>
+
           <button
             className="text-[11px] font-semibold text-white px-3.5 py-2 rounded-full whitespace-nowrap"
             style={{ backgroundImage: GRADIENT }}
@@ -57,24 +65,23 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* desktop row: brand — center nav — sign in / sign up */}
+      {/* Desktop Navbar */}
       <div className="hidden md:flex max-w-7xl mx-auto px-8 h-[68px] items-center justify-between">
+        
+        {/* Desktop Logo */}
         <a
           href="#top"
-          className="flex items-center gap-2.5 mr-10"
+          className="flex items-center mr-10"
           onClick={() => setActive("Home")}
         >
-          <span
-            className="h-8 w-8 rounded-lg flex items-center justify-center text-[12px] font-bold text-white"
-            style={{ backgroundImage: GRADIENT }}
-          >
-            DS
-          </span>
-          <span className="text-[17px] font-bold tracking-tight text-slate-900">
-            Dev <GradientText>Stack</GradientText>
-          </span>
+          <img
+            src={logoText}
+            alt="Dev Stack"
+            className="h-9 w-auto"
+          />
         </a>
 
+        {/* Navigation */}
         <nav className="flex items-center gap-8 text-[14px] flex-1 justify-center">
           {LINKS.map((l) => (
             <a
@@ -102,10 +109,12 @@ export default function Navbar() {
           ))}
         </nav>
 
+        {/* Desktop Auth Buttons */}
         <div className="flex items-center gap-4">
           <button className="text-[14px] text-slate-600 hover:text-slate-900 transition-colors">
             Sign In
           </button>
+
           <button
             className="text-[13px] font-semibold text-white px-5 py-2.5 rounded-full"
             style={{ backgroundImage: GRADIENT }}
@@ -115,6 +124,7 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {open && (
         <div className="md:hidden border-t border-slate-100 px-5 py-3 flex flex-col gap-3 text-[14px] text-slate-600 bg-white">
           {LINKS.map((l) => (
