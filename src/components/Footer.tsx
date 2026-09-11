@@ -1,5 +1,4 @@
-import { GRADIENT } from "../theme";
-import { GradientText } from "./ui";
+import logoText from "../assets/logo-text.png";
 
 const GROUPS: Record<string, string[]> = {
   Product: ["Home", "Technologies", "Projects"],
@@ -12,10 +11,7 @@ export default function Footer() {
     <footer id="contact" className="border-t border-slate-100 mt-16 md:mt-20">
       <div className="max-w-7xl mx-auto px-5 md:px-8 py-10 md:py-14 grid gap-8 md:gap-10 md:grid-cols-[1.3fr_1fr_1fr_1fr] text-center md:text-left">
         <div className="flex flex-col items-center md:items-start">
-          <div className="flex items-center gap-2.5 mb-3">
-            <span className="h-8 w-8 rounded-lg flex items-center justify-center text-[12px] font-bold text-white" style={{ backgroundImage: GRADIENT }}>DS</span>
-            <span className="text-[16px] font-bold text-slate-900">Dev <GradientText>Stack</GradientText></span>
-          </div>
+                    <img src={logoText} alt="Dev Stack" className="h-7 w-auto mb-3" />
           <p className="text-[13px] text-slate-500 max-w-xs leading-relaxed">
             Curated tools, technologies, and resources for developers building modern software.
           </p>
