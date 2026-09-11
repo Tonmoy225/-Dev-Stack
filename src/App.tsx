@@ -62,20 +62,7 @@ function App() {
             </h2>
             <p className="text-[13px] text-slate-500 mt-1">Pick the technologies you need to build your ideal stack.</p>
           </div>
-          <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
-            {CATEGORIES.map((c) => (
-              <button
-                key={c}
-                onClick={() => setCategory(c)}
-                className={`text-[12px] px-3 py-1.5 rounded-full border transition-colors ${
-                  category === c ? "text-white border-transparent" : "text-slate-500 border-slate-200 hover:border-slate-300"
-                }`}
-                style={category === c ? { backgroundImage: GRADIENT } : {}}
-              >
-                {c}
-              </button>
-            ))}
-          </div>
+   
         </div>
 
         <div className="grid lg:grid-cols-[1fr_300px] gap-6 md:gap-8 items-start">
@@ -97,7 +84,7 @@ function App() {
         </div>
       </section>
 
-      <section id="about" className="max-w-7xl mx-auto px-5 md:px-8 pb-24">
+      {/* <section id="about" className="max-w-7xl mx-auto px-5 md:px-8 pb-24">
         <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8 sm:p-12 text-center">
           <h2 className="text-[22px] font-extrabold text-slate-900">Built for developers comparing their options</h2>
           <p className="text-[14px] text-slate-500 max-w-xl mx-auto mt-3 leading-relaxed">
@@ -105,7 +92,7 @@ function App() {
             Now it's a single, quick place to compare tools and keep a running shortlist.
           </p>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
       <ToastContainer position="bottom-right" autoClose={3000} hideProgressBar theme="light" />
