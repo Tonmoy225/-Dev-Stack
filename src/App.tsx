@@ -8,14 +8,14 @@ import TechCard from "./components/TechCard";
 import StackPanel from "./components/StackPanel";
 import Footer from "./components/Footer";
 import { GradientText } from "./components/ui";
-import { CATEGORIES, GRADIENT } from "./theme";
+
 import type { Technology } from "./types";
 
 function App() {
   const [techs, setTechs] = useState<Technology[]>([]);
   const [loading, setLoading] = useState(true);
   const [stackIds, setStackIds] = useState<string[]>([]);
-  const [category, setCategory] = useState<string>("All");
+  const [category] = useState<string>("All");
 
   // Load the technology data from the local JSON file — not hardcoded here.
   useEffect(() => {
